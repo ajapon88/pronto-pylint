@@ -19,8 +19,9 @@ jobs:
         os: [ubuntu-latest, macos-latest]
       fail-fast: false
     steps:
-    - run: brew install cmake pkg-config # rugged
+    - run: brew install cmake pkg-config python3
       if: matrix.os == 'macos-latest'
+    - run: pip3 install "pylint==2.4.4" " pylint-exit==1.1.0"
     - uses: actions/checkout@v1
       with:
         fetch-depth: 1
