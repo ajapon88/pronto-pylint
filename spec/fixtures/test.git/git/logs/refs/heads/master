@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 2ef6fba6ba0bf5887b39e27c508f828065edce9f ajapon88 <ajapon88@gmail.com> 1578071185 +0900	commit (initial): initial commit
+2ef6fba6ba0bf5887b39e27c508f828065edce9f dad84088a57dbfdf81e398f277ebd010a9a5cd76 ajapon88 <ajapon88@gmail.com> 1578071243 +0900	commit: add test.py
+dad84088a57dbfdf81e398f277ebd010a9a5cd76 2ef6fba6ba0bf5887b39e27c508f828065edce9f ajapon88 <ajapon88@gmail.com> 1578074004 +0900	reset: moving to HEAD^
+2ef6fba6ba0bf5887b39e27c508f828065edce9f 7b7f452f803d9bc3b9872f258dfd35b5a33e6d42 ajapon88 <ajapon88@gmail.com> 1578074017 +0900	commit: add test git
+7b7f452f803d9bc3b9872f258dfd35b5a33e6d42 f44a11a5a4371a42daeb2e229e43fa2507b0b2ec ajapon88 <ajapon88@gmail.com> 1578074055 +0900	commit: add "Unnecessary parens after 'print' keyword"
