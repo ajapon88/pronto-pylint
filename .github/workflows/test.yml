@@ -19,6 +19,8 @@ jobs:
         os: [ubuntu-latest, macos-latest]
       fail-fast: false
     steps:
+    - run: brew install cmake # rugged
+      if: matrix.os == 'macos-latest'
     - uses: actions/checkout@v1
       with:
         fetch-depth: 1
