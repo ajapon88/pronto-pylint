@@ -19,35 +19,19 @@ module Pronto
         it { should == [] }
       end
 
-      context 'patches with an offense' do
-        include_context 'test repo'
-
-        let(:patches) { repo.show_commit('f44a11a') }
-
-        its(:count) { should == 1 }
-
-        it 'includes the offense message' do
-          expect(subject.first.msg).to include("[C0325] Unnecessary parens after 'print' keyword")
-        end
-      end
-
       context 'patches with multiple offense' do
         include_context 'test repo'
 
-        let(:patches) { repo.show_commit('7b7f452') }
+        let(:patches) { repo.show_commit('641b788') }
 
-        its(:count) { should == 6 }
+        its(:count) { should == 2 }
 
         it 'returns messages' do
           expect(subject.map(&:msg))
             .to match(
               [
-                a_string_matching("[C0325] Unnecessary parens after 'print' keyword"),
-                a_string_matching("[C0111] Missing module docstring"),
-                a_string_matching("[E0401] Unable to import 'wsgi'"),
-                a_string_matching("[C0103] Constant name \"server\" doesn't conform to UPPER_CASE naming style"),
-                a_string_matching("[W0611] Unused import BaseHTTPServer"),
-                a_string_matching("W0611] Unused import CGIHTTPServer")
+                a_string_matching("[C0103] Constant name \"model\" doesn't conform to UPPER_CASE naming style"),
+                a_string_matching("[W0611] Unused import sys")
               ]
             )
         end
