@@ -1,0 +1,16 @@
+name: Pronto
+
+on:
+  pull_request: null
+
+jobs:
+  pronto:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ./.github/actions/pronto-ruby
+      env:
+        PRONTO_PULL_REQUEST_ID: ${{ github.event.number }}
+        PRONTO_GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        commit: origin/${{ github.event.pull_request.base.ref }}
