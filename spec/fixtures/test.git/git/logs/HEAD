@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 f6aef40a7bf77fd4ff67762b3df4d81ba9dc68b7 ajapon88 <ajapon88@gmail.com> 1578078067 +0900	commit (initial): add test.py
+f6aef40a7bf77fd4ff67762b3df4d81ba9dc68b7 641b788c8e8ffc04bbcd9c70a38ffe1167465512 ajapon88 <ajapon88@gmail.com> 1578078083 +0900	commit: add multiple offence
+641b788c8e8ffc04bbcd9c70a38ffe1167465512 7139eae228d97522dbb55966a0c50723e2c8cb11 ajapon88 <ajapon88@gmail.com> 1578108775 +0900	commit: add pylintrc
+7139eae228d97522dbb55966a0c50723e2c8cb11 641b788c8e8ffc04bbcd9c70a38ffe1167465512 ajapon88 <ajapon88@gmail.com> 1578109886 +0900	reset: moving to HEAD^
+641b788c8e8ffc04bbcd9c70a38ffe1167465512 47501a889c30c3f674425fd79f3a52b6fbaafa4d ajapon88 <ajapon88@gmail.com> 1578109919 +0900	commit: add
+47501a889c30c3f674425fd79f3a52b6fbaafa4d 641b788c8e8ffc04bbcd9c70a38ffe1167465512 ajapon88 <ajapon88@gmail.com> 1578109924 +0900	reset: moving to HEAD^
+641b788c8e8ffc04bbcd9c70a38ffe1167465512 c30acd68f44a0be1cd99eef682200b4a0b0250d3 ajapon88 <ajapon88@gmail.com> 1578109940 +0900	commit: add pylintrc

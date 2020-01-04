@@ -6,7 +6,7 @@ require "pronto/pylint/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "pronto-pylint"
-  spec.version       = Pronto::Pylint::VERSION
+  spec.version       = Pronto::PylintVersion::VERSION
   spec.authors       = ["ajapon88"]
   spec.email         = ["ajapon88@gmail.com"]
 
@@ -42,4 +42,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency 'rspec-its', '~> 1.2'
 end
