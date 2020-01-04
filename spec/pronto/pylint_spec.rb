@@ -37,7 +37,7 @@ module Pronto
         end
       end
 
-      context 'patches with multiple offense' do
+      context 'patches with pylintrc offense' do
         include_context 'test repo'
 
         before { FileUtils.mv(pylintrc, dot_pylintrc) }
@@ -47,7 +47,7 @@ module Pronto
 
         its(:count) { should == 1 }
 
-        it 'returns first message' do
+        it 'return first message' do
           expect(subject.first.msg).to include('[W0611] Unused import sys')
         end
       end
