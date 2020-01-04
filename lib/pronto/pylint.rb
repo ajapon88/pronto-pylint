@@ -47,16 +47,22 @@ module Pronto
 
     private
 
+    def git_repo_path
+      @git_repo_path ||= Rugged::Repository.discover(@patches.repo.path).workdir
+    end
+
     def python_file?(path)
       File.extname(path) == '.py'
     end
 
     def run_pylint(patch)
-      file_path = patch.new_file_full_path.to_s
-      ret = `pylint #{Shellwords.shellescape(file_path)} -f json`
-      raise ret unless system("pylint-exit #{$CHILD_STATUS.exitstatus} > /dev/null")
+      Dir.chdir(git_repo_path) do
+        file_path = patch.new_file_full_path.to_s
+        ret = `pylint #{Shellwords.shellescape(file_path)} -f json`
+        raise ret unless system("pylint-exit #{$CHILD_STATUS.exitstatus} > /dev/null")
 
-      JSON.parse(ret)
+        JSON.parse(ret)
+      end
     end
   end
 end

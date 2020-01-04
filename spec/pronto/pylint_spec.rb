@@ -30,10 +30,25 @@ module Pronto
           expect(subject.map(&:msg))
             .to match(
               [
-                a_string_matching("[C0103] Constant name \"model\" doesn't conform to UPPER_CASE naming style"),
-                a_string_matching("[W0611] Unused import sys")
+                a_string_matching(%q([C0103] Constant name "model" doesn't conform to UPPER_CASE naming style)),
+                a_string_matching('[W0611] Unused import sys')
               ]
             )
+        end
+      end
+
+      context 'patches with multiple offense' do
+        include_context 'test repo'
+
+        before { FileUtils.mv(pylintrc, dot_pylintrc) }
+        after { FileUtils.mv(dot_pylintrc, pylintrc) }
+
+        let(:patches) { repo.show_commit('641b788') }
+
+        its(:count) { should == 1 }
+
+        it 'returns first message' do
+          expect(subject.first.msg).to include('[W0611] Unused import sys')
         end
       end
     end
