@@ -51,6 +51,18 @@ module Pronto
           expect(subject.first.msg).to include('[W0611] Unused import sys')
         end
       end
+
+      context 'patches with cli' do
+        include_context 'test repo'
+
+        let(:patches) { repo.show_commit('d06f10f') }
+
+        its(:count) { should == 1 }
+
+        it 'return first message' do
+          expect(subject.first.msg).to include('[C0114] Missing module docstring')
+        end
+      end
     end
   end
 end
